@@ -1,0 +1,125 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+    body {
+        background-color:black;
+        padding:0px;
+        margin:0px;
+        font-family: Raleway, sans-serif;
+        }
+        h1{
+        font-weight: 200;
+        color:white;
+        }
+        h2{
+        font-weight: 500;
+        color:white;
+        }
+        .patterntop{
+        fill:rgb(102,102,102);
+        }
+        .patternleft{
+        fill:rgb(153,153,153);
+        }
+        .patternright{
+        fill:rgb(51,51,51);
+        }
+        #controller{
+        width: 680px;
+        height: 180px;
+        margin: 10px;
+        padding: 20px;
+        border: 2px solid grey;
+        font-weight: 400;
+        }
+        label{
+        text-align: left;
+        color:white;s
+        }
+        #myRotation, #myScale{
+        width: 100%;
+        }
+        #lblRotation, #lblScale{
+        color: darkgreen;
+        font-weight: 500;
+        }
+        .mylabel{
+        fill:white;
+        font-family: Raleway;
+        font-weight: 200;
+        font-size: 2em;
+        }
+        #inlineRotation, #inlineScale{
+        font-weight: 400;
+        }
+        #controller {
+          border:none;
+        }
+    </style>
+    <script>
+      function fChangeAngle() {
+          //reference slider values
+          var angle = document.getElementById('myRotation').value;
+          var scale = document.getElementById('myScale').value;
+          //create string as value for the patternTransform attribute
+          var myvalsp = "rotate("+ angle +") scale("+ scale +")";
+          //modify patternTransform attribute with rotate and scale function
+          document.getElementById("svg3Dpattern").setAttribute("patternTransform", myvalsp);
+          //refresh label with current rotation angle and scale factor
+          document.getElementById("lblRotation").innerHTML = angle+"°";
+          document.getElementById("inlineRotation").innerHTML = angle+"°";
+          document.getElementById("lblScale").innerHTML = scale+"x";
+          document.getElementById("inlineScale").innerHTML = scale+"x";
+      };
+    </script>
+  </head>
+  <body>
+    <center>
+  <!-- <h1>SVG 3D seamless weaving pattern</h1> -->
+  <svg xmlns='http://www.w3.org/2000/svg' width="720px" height="480px">
+    <!-- <title>SVG 3D weaving pattern</title> -->
+    <!-- <desc>Different seamless SVG pattern 3D weaving pattern - 3D Webmuster in variations of grey</desc>> -->
+  <defs>
+  <pattern id="svg3Dpattern" width="120" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(0) scale(1)">
+    <path d="M30,80L60,60L60,0L60,80" class="patterntop"/>
+    <path d="M60,60L90,80L60,80L60,60" class="patternright"/>
+    <path d="M0,0C0,0 27.068,18.046 44.843,29.895C54.021,36.014 65.979,36.014 75.157,29.895C92.932,18.046 120,0 120,0L120,20C120,20 92.402,38.399 74.64,50.24C65.775,56.15 54.225,56.15 45.36,50.24C27.598,38.399 0,20 0,20L0,0" class="patternleft"/>
+    <path d="M14.987,70.008L14.988,70.008L45,50L45.36,50.24C54.225,56.15 65.775,56.15 74.64,50.24L75,50L105.012,70.008L105.013,70.008C109.563,72.992 114.781,74.485 120,74.485L120,80L90,80L60,60L30,80L0,80L0,74.485C5.219,74.485 10.437,72.992 14.987,70.008Z" class="patternleft"/>
+    <path d="M60,80L45,80L45,70L0,40L0,20L45.36,50.24C49.793,53.195 54.896,54.673 60,54.673L60,80Z" class="patternright"/>
+    <path d="M74.966,50.022L120,20L120,40L75,70L75,80L60,80L60,54.673C65.104,54.673 70.207,53.195 74.64,50.24L74.966,50.022Z" class="patterntop"/>
+    <path d="M0,14.673L0,0L30,0L14.966,10.022L14.64,10.24C10.207,13.195 5.104,14.673 0,14.673Z" class="patternleft"/>
+    <path d="M120,14.673C114.896,14.673 109.793,13.195 105.36,10.24L90,0L120,0L120,14.673Z" class="patternleft"/>
+    <path d="M120,74.485C114.777,74.485 109.553,72.99 105.001,70L105,70L105,30L60,0L90.003,0.002L105.36,10.24C109.793,13.195 114.896,14.673 120,14.673L120,74.485Z" class="patternright"/>
+    <path d="M14.999,70C10.447,72.99 5.223,74.485 0,74.485L0,14.673C5.104,14.673 10.207,13.195 14.64,10.24L14.966,10.022L29.966,0.023L60,0L15,30L15,70L14.999,70Z" class="patterntop"/>
+    <path d="M60,34.485C54.776,34.485 49.552,32.989 45,29.999L45,0L60,0L60,34.485Z" style="fill:rgb(51,51,51);"/>
+    <path d="M60,34.485L60,0L75,0L75,29.999C70.448,32.989 65.224,34.485 60,34.485Z" class="patterntop"/>
+  </pattern>
+  </defs>
+  <rect x="0" y="0" width="720px" height="480px" fill="url(#svg3Dpattern)" stroke="" stroke-width="">
+    <!-- <animate id="animation1" attributeName="opacity" from="0.3" to="1" dur="5s" begin="0s;animation2.end" />
+    <animate id="animation2" attributeName="opacity" from="1" to="0.3" dur="2s" begin="animation1.end+3s" /> -->
+  </rect>
+  <!-- <rect id="bglabel" x="240" y="360" rx="15" ry="15" width="240px" height="100px" fill="#Fff" fill-opacity="0.8" stroke="" stroke-width=""/>
+  <text class="mylabel" x="260" y="400">Rotation: <tspan id="inlineRotation">0°</tspan></text>
+  <text class="mylabel" x="260" y="440">Scale: <tspan id="inlineScale">1x</tspan></text>
+  <!-- <rect id="refRect" x="120" y="80" width="120" height="80" fill="url(#svg3Dpattern)" stroke="none"/> --> -->
+
+  </svg>
+  <div id="controller">
+    <!-- <h2>Playing with scale and rotate on the pattern</h2> -->
+    <label style="text-align:left;">Rotation in degree: <span id="lblRotation">0°</span></label>
+    <input id="myRotation" type="range" min="0" max="360" step="1" value="0" onchange="fChangeAngle()" oninput="fChangeAngle()"/>
+    <label style="text-align:left;">Scale factor: <span id="lblScale">1x</span></label>
+    <input id="myScale" type="range" min="1" max="3" step="0.05" value="1" onchange="fChangeAngle()" oninput="fChangeAngle()"/>
+  </div>
+  <p style="color:white;s">credit:Norbert Mesch, http://codepen.io/itsnorbat/</p>
+</center>
+
+  </body>
+</html>

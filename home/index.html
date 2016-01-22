@@ -1,0 +1,165 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src='app.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Julius+Sans+One|Crimson+Text:400,600,700,400italic,600italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Armata|
+    Roboto:400,500,300,100,900,700,100italic,300italic,400italic,500italic,700italic,900italic'
+    rel='stylesheet' type='text/css'>
+    <style>
+      *, *:before, *:after {
+      margin:0;
+      padding:0;
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      box-sizing:border-box;
+      }
+      html, body {
+      width:100%;
+      height:100%;
+      }
+      body {
+      background:url('https://dl.dropboxusercontent.com/u/330966/dot_1.svg'),
+                 url('https://dl.dropboxusercontent.com/u/330966/dot_2.svg'),
+                 url('https://dl.dropboxusercontent.com/u/330966/dot_3.svg'),
+                 url('https://dl.dropboxusercontent.com/u/330966/dot_4.svg'), #F6F6F6;
+      background-repeat:no-repeat;
+      background-position:50% 50%, 30% 30%, 65% 30%, 45% 65%;
+      background-size:40% auto, 25% auto, 55% auto, 50% auto;
+      -webkit-animation:pulsate 226s linear infinite;
+      animation:pulsate 226s linear infinite;
+      }
+      @-webkit-keyframes pulsate {
+      0% {
+        background-position:50% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:40% auto, 25% auto, 55% auto, 50% auto;
+      }
+      10% {
+        background-position:66% 30%, 30% 45%, 65% 30%, 45% 65%;
+        background-size:5% auto, 80% auto, 5% auto, 5% auto;
+      }
+      20% {
+        background-position:50% 50%, 30% 42%, 65% 30%, 45% 65%;
+        background-size:60% auto, 15% auto, 75% auto, 70% auto;
+      }
+      30% {
+        background-position:50% 38%, 71% 30%, 65% 30%, 45% 65%;
+        background-size:10% auto, 60% auto, 10% auto, 10% auto;
+      }
+      40% {
+        background-position:50% 50%, 30% 60%, 65% 32%, 30% 65%;
+        background-size:70% auto, 5% auto, 75% auto, 65% auto;
+      }
+      50% {
+        background-position:50% 75%, 30% 65%, 65% 30%, 24% 65%;
+        background-size:5% auto, 45% auto, 10% auto, 100% auto;
+      }
+      60% {
+        background-position:50% 50%, 42% 30%, 26% 30%, 87% 65%;
+        background-size:55% auto, 10% auto, 45% auto, 5% auto;
+      }
+      70% {
+        background-position:50% 35%, 30% 30%, 65% 30%, 56% 65%;
+        background-size:10% auto, 60% auto, 5% auto, 55% auto;
+      }
+      80% {
+        background-position:23% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:80% auto, 10% auto, 55% auto, 5% auto;
+      }
+      90% {
+        background-position:41% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:5% auto, 85% auto, 10% auto, 25% auto;
+      }
+      100% {
+        background-position:41% 50%, 30% 65%, 65% 30%, 45% 65%;
+        background-size:62% auto, 5% auto, 65% auto, 67% auto;
+      }
+      }
+      @keyframes pulsate {
+      0% {
+        background-position:50% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:40% auto, 25% auto, 55% auto, 50% auto;
+      }
+      10% {
+        background-position:66% 30%, 30% 45%, 65% 30%, 45% 65%;
+        background-size:5% auto, 80% auto, 5% auto, 5% auto;
+      }
+      20% {
+        background-position:50% 50%, 30% 42%, 65% 30%, 45% 65%;
+        background-size:60% auto, 15% auto, 75% auto, 70% auto;
+      }
+      30% {
+        background-position:50% 38%, 71% 30%, 65% 30%, 45% 65%;
+        background-size:10% auto, 60% auto, 10% auto, 10% auto;
+      }
+      40% {
+        background-position:50% 50%, 30% 60%, 65% 32%, 30% 65%;
+        background-size:70% auto, 5% auto, 75% auto, 65% auto;
+      }
+      50% {
+        background-position:50% 75%, 30% 65%, 65% 30%, 24% 65%;
+        background-size:5% auto, 45% auto, 10% auto, 100% auto;
+      }
+      60% {
+        background-position:50% 50%, 42% 30%, 26% 30%, 87% 65%;
+        background-size:55% auto, 10% auto, 45% auto, 5% auto;
+      }
+      70% {
+        background-position:50% 35%, 30% 30%, 65% 30%, 56% 65%;
+        background-size:10% auto, 60% auto, 5% auto, 55% auto;
+      }
+      80% {
+        background-position:23% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:80% auto, 10% auto, 55% auto, 5% auto;
+      }
+      90% {
+        background-position:41% 50%, 30% 30%, 65% 30%, 45% 65%;
+        background-size:5% auto, 85% auto, 10% auto, 25% auto;
+      }
+      100% {
+        background-position:41% 50%, 30% 65%, 65% 30%, 45% 65%;
+        background-size:62% auto, 5% auto, 65% auto, 67% auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class='content-wrapper'>
+      <!-- Title of Presentation -->
+      <h1>Scalable Vector Graphics</h1>
+      <div class="intro">
+        <!-- Definition -->
+        <p>
+          Are text-based images. They are rendered by the browser
+          and are made of XML.
+        <p>
+      </div>
+      <div class='differentiation'>
+        <h2>How is SVG different?</h2>
+        <p>&nbsp;
+          Unlike raster images, which are <u><a href="pictures.html">pixel-based</a></u>, SVG's are <i>point-based.</i>
+          Rather than having a fixed amount of space, like the pixel, svg points can be scaled
+          inifinetley because they are plotted on a cartesian grid.
+        </p>
+      </div>
+      <div class="how-to">
+        <h3>Things that you can use to make SVG's</h3>
+        <p>
+          Inkscape, Illustrator, Sketch, GIMP, or even <u>A text editor<u>.
+        </p>
+      </div>
+    </div>
+    <footer>
+    <button class='element1'>Definition</button>
+    <button class='element2'>Differentiation</button>
+    <button class='element3'>How To</button>
+    <a href='slideTwo/slideTwo.html'>next</a>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "firebase": "svg-presentation-q3",
+  "public": "home",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
